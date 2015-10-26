@@ -1,0 +1,25 @@
+{
+    "name": "caf_gadget_daemon",
+    "description": "CAF device daemon that manages apps.",
+    "version": "0.2.1",
+    "author": "Antonio Lain <antlai@cafjs.com>",
+    "dependencies": {
+        "caf_components": "^0.2.0",
+        "caf_platform": "^0.2.0",
+        "rimraf": "^2.4.3",
+        "mkdirp": "^0.5.1",
+        "minimist" : "^1.2.0",
+         "caf_iot": "^0.2.0",
+        "dockerode": "^2.2.3"
+    },
+    "devDependencies": {
+        "nodeunit" : ">=0.9"
+    },
+    "scripts": {
+        "start" : "node ./index.js",
+        "test": "node ./node_modules/.bin/nodeunit",
+        "build": "echo done"
+    },
+    "main": "index",
+    "engines": { "node": ">= 0.10.29" }
+}

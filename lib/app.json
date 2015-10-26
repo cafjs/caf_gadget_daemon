@@ -1,0 +1,9 @@
+{
+    "name": "app",
+    "module": "./plug_application",
+    "description": "Abstracts an app running in a container.",
+    "env": {
+        "token" : null
+    }
+}
+
