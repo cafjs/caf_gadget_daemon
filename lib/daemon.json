@@ -10,9 +10,9 @@
         "appPublisher" :"process.env.APP_PUBLISHER||root",
         "appLocalName" : "process.env.APP_LOCAL_NAME||gadget",
         "appSuffix" : "process.env.APP_SUFFIX||cafjs.com",
-        "synchronousInit" : "process.env.SYNCHRONOUS_INIT||false",
+        "synchronousInit" : "process.env.SYNCHRONOUS_INIT||true",
         "maxRetries" : "process.env.MAX_RETRIES||10",
-        "retryDelay" : "process.env.RETRY_DELAY||1000",
+        "retryDelay" : "process.env.RETRY_DELAY||2000",
         "interval": "process.env.INTERVAL||5000",
         "longInterval": "process.env.LONG_INTERVAL||10000",
         "dieDelay": "process.env.DIE_DELAY||-1",
@@ -58,7 +58,12 @@
             "module" : "./plug_builder",
             "description" : "Builds container app images.",
             "env" : {
-                "buildDir" : "process.env.BUILD_DIR||/tmp/build"
+                "buildDir" : "process.env.BUILD_DIR||/tmp/build",
+                "dockerfileTemplate" : "process.env.DOCKERFILE_TEMPLATE||Dockerfile.template",
+                "dockerfileDir" : "process.env.DOCKERFILE_DIR||null",
+                "appProtocol" : "$._.env.appProtocol",
+                "appSuffix" : "$._.env.appSuffix",
+                "appFile" :"process.env.APP_FILE||iot.tgz"
             }
         },
         {
@@ -67,10 +72,13 @@
             "description": "Manages an application container.",
             "env" : {
                 "__app_json__" : "app.json",
-                "maxRetries" : 1,
+                "maxRetries" : "$._.env.maxRetries" ,
                 "retryDelay" : "$._.env.retryDelay",
-                "appDir" : "process.env.APP_DIR||/tmp/app",
-                "tokenName" : "$._.env.tokenName"
+                "myId" : "$._.env.myId",
+                "appProtocol" : "$._.env.appProtocol",
+                "appSuffix" : "$._.env.appSuffix",
+                "maxTokenRetries" : "process.env.MAX_TOKEN_RETRIES||30",
+                "tokenDir" : "process.env.TOKEN_DIR||/tmp"
             },
             "components" : [
             ]

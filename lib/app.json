@@ -3,7 +3,18 @@
     "module": "./plug_application",
     "description": "Abstracts an app running in a container.",
     "env": {
-        "token" : null
+        "tokenFile" : null,
+        "image" : null,
+        "myId" : null,
+        "appName" : null,
+        "appProtocol" : null,
+        "appSuffix" : null,
+        "privileged" : "process.env.PRIVILEGED||false",
+        "cmdArray" : "process.env.CMD_ARRAY||[]",
+        "extraCreateOptions" : "process.env.EXTRA_CREATE_OPTIONS||{}",
+        "extraStartOptions" : "process.env.EXTRA_START_OPTIONS||{}",
+        "outputFile": "process.env.OUTPUT_FILE||null"
+
     }
 }
 
