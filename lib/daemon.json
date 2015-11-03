@@ -4,7 +4,8 @@
     "description" : "Platform supervisor",
     "env" : {
         "myId" : "process.env.MY_ID||null",
-        "tokenFile" : "process.env.TOKEN_FILE||/config/token",
+        "tokenDir" : "process.env.TOKEN_DIR||/config",
+        "tokenFile" : "process.env.TOKEN_FILE||token",
         "iotSession" : "process.env.IOT_SESSION||iot",
         "appProtocol" : "process.env.APP_PROTOCOL||https",
         "appPublisher" :"process.env.APP_PUBLISHER||root",
@@ -40,6 +41,7 @@
                 "appSuffix" : "$._.env.appSuffix",
                 "session" : "$._.env.iotSession",
                 "myId" : "$._.env.myId",
+                "tokenDir" : "$._.env.tokenDir",
                 "tokenFile" : "$._.env.tokenFile"
             },
             "components": [
@@ -78,7 +80,8 @@
                 "appProtocol" : "$._.env.appProtocol",
                 "appSuffix" : "$._.env.appSuffix",
                 "maxTokenRetries" : "process.env.MAX_TOKEN_RETRIES||30",
-                "tokenDir" : "process.env.TOKEN_DIR||/tmp"
+                "tokenDir" : "$._.env.tokenDir",
+                "tokenFile" : "$._.env.tokenFile"
             },
             "components" : [
             ]
