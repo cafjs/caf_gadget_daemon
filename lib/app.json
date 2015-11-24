@@ -5,6 +5,8 @@
     "env": {
         "tokenDir" : null,
         "tokenFile" : null,
+        "mailboxDir" : null,
+        "mailboxFile" : null,
         "image" : null,
         "myId" : null,
         "appName" : null,

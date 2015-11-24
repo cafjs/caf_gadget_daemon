@@ -6,6 +6,8 @@
         "myId" : "process.env.MY_ID||null",
         "tokenDir" : "process.env.TOKEN_DIR||/config",
         "tokenFile" : "process.env.TOKEN_FILE||token",
+        "mailboxDir" : "process.env.MAILBOX_DIR||/control",
+        "mailboxFile" : "process.env.MAILBOX_FILE||mailbox",
         "iotSession" : "process.env.IOT_SESSION||iot",
         "appProtocol" : "process.env.APP_PROTOCOL||https",
         "appPublisher" :"process.env.APP_PUBLISHER||root",
@@ -56,6 +58,25 @@
             }
         },
         {
+            "name": "mailbox",
+            "module": "./plug_mailbox",
+            "description": "Plug that communicates with an app using a shared file.\n Properties: \n",
+            "env": {
+                "mailboxDir" : "$._.env.mailboxDir",
+                "mailboxFile" : "$._.env.mailboxFile"
+            }
+        },
+        {
+            "name": "nap",
+            "module": "./plug_nap",
+            "description": "Plug that controls restart after a complete shutdown.\n Properties: \n",
+            "env": {
+                "deviceRTC" : "process.env.DEVICE_RTC||/dev/i2c-1",
+                "deviceAddress" : "process.env.DEVICE_ADDRESS||0x68",
+                "debugRTC" : "process.env.DEBUG_RTC||false"
+            }
+        },
+        {
             "name": "builder",
             "module" : "./plug_builder",
             "description" : "Builds container app images.",
@@ -81,7 +102,9 @@
                 "appSuffix" : "$._.env.appSuffix",
                 "maxTokenRetries" : "process.env.MAX_TOKEN_RETRIES||30",
                 "tokenDir" : "$._.env.tokenDir",
-                "tokenFile" : "$._.env.tokenFile"
+                "tokenFile" : "$._.env.tokenFile",
+                "mailboxDir" : "$._.env.mailboxDir",
+                "mailboxFile" : "$._.env.mailboxFile"
             },
             "components" : [
             ]
