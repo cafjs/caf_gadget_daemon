@@ -9,4 +9,5 @@
 
 FROM registry.cafjs.com:32000/root-rpi2armhf
 
-
+#do not use 'npm run start' because it does not propagate SIGTERM
+ENTRYPOINT [ "./start.js"]

@@ -12,6 +12,8 @@
         "appName" : null,
         "appProtocol" : null,
         "appSuffix" : null,
+        "netName" : null,
+        "trustedPubKeyFile" : null,
         "privileged" : "process.env.PRIVILEGED||false",
         "cmdArray" : "process.env.CMD_ARRAY||[]",
         "extraCreateOptions" : "process.env.EXTRA_CREATE_OPTIONS||{}",

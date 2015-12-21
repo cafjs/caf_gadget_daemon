@@ -19,7 +19,10 @@
         "interval": "process.env.INTERVAL||5000",
         "longInterval": "process.env.LONG_INTERVAL||10000",
         "dieDelay": "process.env.DIE_DELAY||-1",
-        "maxHangRetries":  "process.env.MAX_HANG_RETRIES||200"
+        "maxHangRetries":  "process.env.MAX_HANG_RETRIES||200",
+        "netName" : "process.env.NET_NAME||bridge",
+        "netAlreadyCreated" : "process.env.NET_ALREADY_CREATED||true",
+        "trustedPubKeyFile" : "process.env.TRUSTED_PUB_KEY_FILE||rsa_pub.pem"
     },
     "components": [
         {
@@ -55,6 +58,15 @@
             "description": "Plug to access the local Docker daemon\n Properties: \n",
             "env": {
                 "dockerSocket" : "process.env.DOCKER_SOCKET||/var/run/docker.sock"
+            }
+        },
+        {
+            "name": "network",
+            "module": "./plug_network",
+            "description": "Plug that creates a Docker network.\n Properties: \n",
+            "env": {
+                "netName" : "$._.env.netName",
+                "alreadyCreated" : "$._.env.netAlreadyCreated"
             }
         },
         {
@@ -104,7 +116,9 @@
                 "tokenDir" : "$._.env.tokenDir",
                 "tokenFile" : "$._.env.tokenFile",
                 "mailboxDir" : "$._.env.mailboxDir",
-                "mailboxFile" : "$._.env.mailboxFile"
+                "mailboxFile" : "$._.env.mailboxFile",
+                "networks": ["network"],
+                "trustedPubKeyFile" : "$._.env.trustedPubKeyFile"
             },
             "components" : [
             ]
