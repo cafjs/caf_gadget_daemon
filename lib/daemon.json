@@ -22,7 +22,9 @@
         "maxHangRetries":  "process.env.MAX_HANG_RETRIES||200",
         "netName" : "process.env.NET_NAME||bridge",
         "netAlreadyCreated" : "process.env.NET_ALREADY_CREATED||true",
-        "trustedPubKeyFile" : "process.env.TRUSTED_PUB_KEY_FILE||rsa_pub.pem"
+        "trustedPubKeyFile" : "process.env.TRUSTED_PUB_KEY_FILE||rsa_pub.pem",
+        "appDevices" : "process.env.APP_DEVICES||[\"/dev/gpiomem\"]",
+        "appPrivileged" : "process.env.APP_PRIVILEGED||false"
     },
     "components": [
         {
@@ -117,6 +119,8 @@
                 "tokenFile" : "$._.env.tokenFile",
                 "mailboxDir" : "$._.env.mailboxDir",
                 "mailboxFile" : "$._.env.mailboxFile",
+                "appDevices" : "$._.env.appDevices",
+                "appPrivileged":  "$._.env.appPrivileged",
                 "networks": ["network"],
                 "trustedPubKeyFile" : "$._.env.trustedPubKeyFile"
             },
