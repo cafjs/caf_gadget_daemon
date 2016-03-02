@@ -9,5 +9,7 @@
 
 FROM registry.cafjs.com:32000/root-rpi2armhf
 
+RUN apk add --update sudo && rm -rf /var/cache/apk/*
+
 #do not use 'npm run start' because it does not propagate SIGTERM
 ENTRYPOINT [ "./start.js"]
