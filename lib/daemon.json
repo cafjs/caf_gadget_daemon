@@ -25,6 +25,7 @@
         "netName" : "process.env.NET_NAME||bridge",
         "netAlreadyCreated" : "process.env.NET_ALREADY_CREATED||true",
         "trustedPubKeyFile" : "process.env.TRUSTED_PUB_KEY_FILE||rsa_pub.pem",
+        "privilegedNetwork" : "process.env.PRIVILEGED_NETWORK||host",
         "appDevices" : "process.env.APP_DEVICES||[\"/dev/gpiomem\"]",
         "appPrivileged" : "process.env.APP_PRIVILEGED||false"
     },
@@ -49,7 +50,6 @@
                 "appLocalName" : "$._.env.appLocalName",
                 "appSuffix" : "$._.env.appSuffix",
                 "session" : "$._.env.iotSession",
-                "myId" : "$._.env.myId",
                 "tokenDir" : "$._.env.tokenDir",
                 "tokenFile" : "$._.env.tokenFile"
             },
@@ -99,6 +99,7 @@
             "env" : {
                 "buildDir" : "process.env.BUILD_DIR||/tmp/build",
                 "dockerfileTemplate" : "process.env.DOCKERFILE_TEMPLATE||Dockerfile.template",
+                "dockerfilePrivilegedTemplate" : "process.env.DOCKERFILE_PRIVILEGED_TEMPLATE||DockerfilePrivileged.template",
                 "dockerfileDir" : "process.env.DOCKERFILE_DIR||null",
                 "appProtocol" : "$._.env.appProtocol",
                 "appSuffix" : "$._.env.appSuffix",
@@ -126,7 +127,8 @@
                 "appDevices" : "$._.env.appDevices",
                 "appPrivileged":  "$._.env.appPrivileged",
                 "networks": ["network"],
-                "trustedPubKeyFile" : "$._.env.trustedPubKeyFile"
+                "trustedPubKeyFile" : "$._.env.trustedPubKeyFile",
+                "privilegedNetwork" : "$._.env.privilegedNetwork"
             },
             "components" : [
             ]
