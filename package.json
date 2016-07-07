@@ -1,7 +1,7 @@
 {
     "name": "caf_gadget_daemon",
     "description": "CAF device daemon that manages apps.",
-    "version": "0.2.22",
+    "version": "0.2.23",
     "author": "Antonio Lain <antlai@cafjs.com>",
     "dependencies": {
         "i2c-bus": "^1.0.2",
