@@ -16,6 +16,7 @@
         "trustedPubKeyFile" : null,
         "appDevices" : null,
         "appPrivileged" : null,
+        "appExtraProps" : null,
         "cmdArray" : "process.env.CMD_ARRAY||[]",
         "extraCreateOptions" : "process.env.EXTRA_CREATE_OPTIONS||{}",
         "extraStartOptions" : "process.env.EXTRA_START_OPTIONS||{}",
@@ -23,4 +24,3 @@
 
     }
 }
-
