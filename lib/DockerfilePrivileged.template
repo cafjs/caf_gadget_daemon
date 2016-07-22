@@ -7,7 +7,3 @@
 #
 
 FROM registry.cafjs.com:32000/root-rpi2bluearmhf
-
-ENTRYPOINT ["node"]
-
-CMD [ "./index.js" ]
