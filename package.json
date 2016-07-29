@@ -1,7 +1,7 @@
 {
     "name": "caf_gadget_daemon",
     "description": "CAF device daemon that manages apps.",
-    "version": "0.2.30",
+    "version": "0.2.31",
     "author": "Antonio Lain <antlai@cafjs.com>",
     "dependencies": {
         "request" : "^2.65.0",
@@ -15,12 +15,15 @@
         "dockerode": "^2.2.3"
     },
     "devDependencies": {
+        "eslint": "^3.1.1",
         "nodeunit" : ">=0.9"
     },
     "scripts": {
         "start" : "node ./start.js",
         "test": "node ./node_modules/.bin/nodeunit",
-        "build": "echo done"
+        "build": "echo done",
+        "eslint" : "./node_modules/.bin/eslint .",
+        "eslintfix" : "./node_modules/.bin/eslint --fix ."
     },
     "main": "index",
     "engines": { "node": ">= 0.10.29" }
