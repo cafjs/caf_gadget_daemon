@@ -1,7 +1,7 @@
 {
     "name": "caf_gadget_daemon",
     "description": "CAF device daemon that manages apps.",
-    "version": "0.2.31",
+    "version": "0.2.32",
     "author": "Antonio Lain <antlai@cafjs.com>",
     "dependencies": {
         "request" : "^2.65.0",
@@ -12,7 +12,7 @@
         "fstream" : "^1.0.8",
         "minimist" : "^1.2.0",
         "caf_iot": "^0.2.0",
-        "dockerode": "^2.2.3"
+        "dockerode": "^2.3.0"
     },
     "devDependencies": {
         "eslint": "^3.1.1",
