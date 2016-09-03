@@ -17,7 +17,7 @@
         "appExtraProps" : null,
         "cmdArray" : "process.env.CMD_ARRAY||[]",
         "extraCreateOptions" : "process.env.EXTRA_CREATE_OPTIONS||{}",
-        "extraStartOptions" : "process.env.EXTRA_START_OPTIONS||{}",
+        "extraHostConfig" : "process.env.EXTRA_HOST_CONFIG||{}",
         "outputFile": "process.env.OUTPUT_FILE||null"
 
     }

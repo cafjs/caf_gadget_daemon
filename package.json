@@ -1,7 +1,7 @@
 {
     "name": "caf_gadget_daemon",
     "description": "CAF device daemon that manages apps.",
-    "version": "0.2.32",
+    "version": "0.2.33",
     "author": "Antonio Lain <antlai@cafjs.com>",
     "dependencies": {
         "request" : "^2.65.0",
