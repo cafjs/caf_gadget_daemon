@@ -75,7 +75,7 @@
             "module" : "./plug_builder",
             "description" : "Builds container app images.",
             "env" : {
-                "buildDir" : "process.env.BUILD_DIR||/tmp/build",
+                "buildDir" : "process.env.BUILD_DIR||/tmp/build_cafjs",
                 "dockerfileTemplate" : "process.env.DOCKERFILE_TEMPLATE||Dockerfile.template",
                 "dockerfilePrivilegedTemplate" : "process.env.DOCKERFILE_PRIVILEGED_TEMPLATE||DockerfilePrivileged.template",
                 "dockerfileDir" : "process.env.DOCKERFILE_DIR||null",

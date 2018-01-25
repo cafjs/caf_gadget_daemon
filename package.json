@@ -1,17 +1,17 @@
 {
     "name": "caf_gadget_daemon",
     "description": "CAF device daemon that manages apps.",
-    "version": "0.2.33",
+    "version": "0.3.0",
     "author": "Antonio Lain <antlai@cafjs.com>",
     "dependencies": {
         "request" : "^2.65.0",
-        "rimraf": "^2.4.3",
+        "rimraf": "^2.5.0",
         "mkdirp": "^0.5.1",
-        "tar" : "^2.2.0",
+        "tar" : "^4.2.0",
         "concat-stream": "^1.5.1",
         "fstream" : "^1.0.8",
         "minimist" : "^1.2.0",
-        "caf_iot": "^0.2.0",
+        "caf_iot": "^0.3.0",
         "dockerode": "^2.3.0"
     },
     "devDependencies": {
