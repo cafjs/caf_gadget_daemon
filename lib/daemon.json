@@ -82,6 +82,7 @@
                 "appProtocol" : "$._.env.appProtocol",
                 "appSuffix" : "$._.env.appSuffix",
                 "appFile" :"process.env.APP_FILE||iot.tgz",
+                "isRegistryPrivate": "process.env.IS_REGISTRY_PRIVATE||true",
                 "registryUsername" :"process.env.REGISTRY_USERNAME||foo",
                 "registryPassword" :"process.env.REGISTRY_PASSWORD||pleasechange",
                 "registryAddress" :"process.env.REGISTRY_ADDRESS||registry.cafjs.com:32000"
