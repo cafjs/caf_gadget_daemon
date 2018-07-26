@@ -24,7 +24,10 @@
         "trustedPubKeyFile" : "process.env.TRUSTED_PUB_KEY_FILE||rsa_pub.pem",
         "privilegedNetwork" : "process.env.PRIVILEGED_NETWORK||host",
         "appDevices" : "process.env.APP_DEVICES||[\"/dev/gpiomem\"]",
-        "appPrivileged" : "process.env.APP_PRIVILEGED||false"
+        "appPrivileged" : "process.env.APP_PRIVILEGED||false",
+        "debugApplication" : "process.env.DEBUG_APPLICATION||false",
+        "debuggerPort" : "process.env.DEBUGGER_PORT||9230",
+        "nodeDebugOptions" : "process.env.NODE_DEBUG_OPTIONS||--inspect=0.0.0.0:9230"
     },
     "components": [
         {
@@ -107,7 +110,10 @@
                 "appPrivileged":  "$._.env.appPrivileged",
                 "networks": ["network"],
                 "trustedPubKeyFile" : "$._.env.trustedPubKeyFile",
-                "privilegedNetwork" : "$._.env.privilegedNetwork"
+                "privilegedNetwork" : "$._.env.privilegedNetwork",
+                "debugApplication": "$._.env.debugApplication",
+                "nodeDebugOptions" : "$._.env.nodeDebugOptions",
+                "debuggerPort" : "$._.env.debuggerPort"
             },
             "components" : [
             ]
