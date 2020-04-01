@@ -1,11 +1,11 @@
-# CAF (Cloud Assistant Framework)
+# Caf.js
 
-Co-design permanent, active, stateful, reliable cloud proxies with your web app.
+Co-design permanent, active, stateful, reliable cloud proxies with your web app and gadgets.
 
-See http://www.cafjs.com 
+See https://www.cafjs.com
 
-## CAF device management daemon
+## Device Management Daemon
 
-A daemon running in the device that connects to a CA (see `caf_gadget`) to receive instructions and security tokens to instantiate applications. 
+A daemon running in the device that connects to a CA (see `caf_gadget`) to instantiate applications and install security tokens.
 
-An application is always run in a Docker container, with an image built in the device itself.
+Applications always run in Docker containers, with the image built in the device itself to improve portability.
