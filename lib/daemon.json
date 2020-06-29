@@ -25,6 +25,7 @@
         "privilegedNetwork" : "process.env.PRIVILEGED_NETWORK||host",
         "appDevices" : "process.env.APP_DEVICES||[\"/dev/gpiomem\"]",
         "appPrivileged" : "process.env.APP_PRIVILEGED||false",
+        "logLevel" : "process.env.LOG_LEVEL||DEBUG",
         "debugApplication" : "process.env.DEBUG_APPLICATION||false",
         "debuggerPort" : "process.env.DEBUGGER_PORT||9230",
         "nodeDebugOptions" : "process.env.NODE_DEBUG_OPTIONS||--inspect=0.0.0.0:9230"
@@ -35,7 +36,7 @@
             "module": "caf_iot#caf_components#plug_log",
             "description": "Logger service",
             "env" : {
-                "logLevel" : "DEBUG"
+                "logLevel" : "$._.env.logLevel"
             }
         },
         {

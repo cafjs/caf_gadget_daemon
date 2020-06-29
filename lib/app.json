@@ -3,6 +3,7 @@
     "module": "./plug_application",
     "description": "Abstracts an app running in a container.",
     "env": {
+        "__ca_temporary__" : true,
         "tokenDir" : null,
         "tokenFile" : null,
         "image" : null,
