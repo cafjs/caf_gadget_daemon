@@ -6,6 +6,7 @@ The  copyright of the original `CAF` project is assigned to `Hewlett-Packard Dev
 
 ## 0.4.1
  - Change log level during debugging
+ - Mount `/proc/device-tree` in unpriviledged containers
 
 ## 0.4.0
  - Add new copyright to simplify third-party contributions
